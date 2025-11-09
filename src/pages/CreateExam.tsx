@@ -7,7 +7,7 @@ import { Question } from '@/types';
 import { QuestionFormModal } from '@/components/QuestionFormModal';
 import { BackButton } from '@/components/BackButton';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function CreateExam() {
   const { subjectId, examId } = useParams<{ subjectId: string; examId: string }>();

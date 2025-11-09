@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Dashboard } from './pages/Dashboard';
 import { CreateExam } from './pages/CreateExam';
 import { TakeExam } from './pages/TakeExam';

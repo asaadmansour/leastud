@@ -11,7 +11,7 @@ interface QuizTimerProps {
 
 export function QuizTimer({ totalSeconds, onTimeUp, isPaused = false }: QuizTimerProps) {
   const [remainingSeconds, setRemainingSeconds] = useState(totalSeconds);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const onTimeUpRef = useRef(onTimeUp);
 
   // Update ref when callback changes

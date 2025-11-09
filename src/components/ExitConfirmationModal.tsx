@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { AlertTriangle } from 'lucide-react';
 import { Modal } from './ui/modal';
 import { Button } from './ui/button';

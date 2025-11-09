@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useStore } from '@/store/useStore';
 import { QuizResult } from '@/types';
 import { QuizRunner } from '@/components/QuizRunner';
@@ -77,7 +76,6 @@ export function TakeExam() {
     if (subjectId && examId) {
       const answeredResults = quizResults.filter((r) => r.userAnswer !== '');
       const correctCount = answeredResults.filter((r) => r.isCorrect).length;
-      const totalAnswered = answeredResults.length;
       const totalQuestions = quizResults.length;
       // Score should be based on total questions, not just answered questions
       const score = totalQuestions > 0
@@ -186,6 +184,10 @@ export function TakeExam() {
   // If no subject or exam, show nothing (redirect will happen via useEffect)
   // But only redirect if we don't have results
   if ((!subject || !exam) && results === null) {
+    return null;
+  }
+
+  if (!exam) {
     return null;
   }
 

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Subject, Exam, Question, ExamAttempt, QuizResult } from '@/types';
+import { Subject, Exam, Question, ExamAttempt } from '@/types';
 import { loadPreloadedSubjects, isPreloadedSubject, isPreloadedExam } from '@/utils/preloadedData';
 
 interface StoreState {

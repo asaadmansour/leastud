@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Plus, Trash2, Upload, X } from 'lucide-react';
 import { Question } from '@/types';
 import { validateQuestion } from '@/utils/validation';
