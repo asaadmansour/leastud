@@ -11,9 +11,12 @@ import { Button } from './components/ui/button';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  // Get basename from environment or use default
+  const basename = import.meta.env.BASE_URL || '/leastud';
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="flex min-h-screen bg-background">
         {/* Mobile Sidebar Overlay */}
         {sidebarOpen && (
